@@ -31,6 +31,8 @@ Body {
 }
 ```
 
+This repo also includes a `Dockerfile` for this API.
+
 ## Coding Tips
 
 To prevent as many potential rendering issues as possible, I recommend the following best practices:
