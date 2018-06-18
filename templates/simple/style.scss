@@ -1,0 +1,109 @@
+@import '../../components/styles/colors';
+@import '../../components/styles/typography';
+@import '../../components/styles/breakpoints';
+@import '../../components/button/button';
+@import '../../components/footer/footer';
+
+$padding: 15px;
+
+body {
+  background: color(background, default);
+}
+
+td {
+  font-family: $font-stack;
+  color: color(text, default);
+}
+
+h1 {
+  font-size: 30px;
+  line-height: 1.3em;
+  color: color(text, light);
+  font-weight: 600;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+
+  @include bp(small) {
+    font-size: 25px;
+  }
+}
+
+a {
+  font-weight: 600;
+  color: color(blue);
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.main {
+  width: map-get($breakpoints, mobile);
+  max-width: map-get($breakpoints, mobile);
+
+  &.body {
+    background-color: white;
+  }
+
+  &.header td {
+    padding-top: 20px;
+  }
+
+  @include bp(mobile) {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+.main-margin {
+  width: 0;
+  padding-left: $padding;
+  line-height: 1px;
+  font-size: 1px;
+}
+
+.main-content {
+  width: map-get($breakpoints, mobile) - $padding * 2;
+
+  > table {
+    width: 100%;
+  }
+}
+
+.main-top-spacer {
+  padding-top: $padding;
+  font-size: 1px;
+  line-height: 1px;
+}
+
+.body-header {
+  padding: $padding 0;
+}
+
+.preheader-only {
+  display: none;
+}
+
+.body-paragraph {
+  font-size: 16px;
+  line-height: 1.5em;
+  padding: 12px 0;
+
+  @include bp(small) {
+    font-size: 14px;
+  }
+}
+
+.button-container {
+  padding: 20px 0 50px;
+}
+
+.body-bottom-padding {
+  padding-top: 10px;
+}
+
+.footer-container {
+  border-top: solid 2px color(border, default);
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>{{ title }}</title>
+</head>
+
+<body>
+
+  {% from "../../components/button/button.njk" import button %}
+
+  <table align="center" class="main header">
+    <tr>
+      <td class="main-margin"></td>
+    </tr>
+  </table>
+  <table align="center" class="main body">
+    <tr>
+      <td class="main-top-spacer" colspan="3"></td>
+    </tr>
+    <tr>
+      <td class="main-margin"></td>
+      <td class="main-content">
+        <table align="center">
+
+          {% block header %}
+          <tr>
+            <td class="body-header">
+              <h1>
+                {{ header }}
+                <span class="preheader-only">&zwnj;&nbsp;</span>
+              </h1>
+            </td>
+          </tr>
+          {% endblock %}
+
+          {% block message %}
+          {% for paragraph in message %}
+          <tr>
+            <td class="body-paragraph">
+              {{ paragraph }}
+            </td>
+          </tr>
+          {% endfor %}
+          {% endblock %}
+
+          {% if buttonLabel %}
+          <tr>
+            <td class="button-container" align="center">
+              {{ button(buttonLabel, buttonLink) }}
+            </td>
+          </tr>
+          {% else %}
+          <tr>
+            <td class="body-bottom-padding"></td>
+          </tr>
+          {% endif %}
+          <tr>
+            <td class="footer-container">
+              {% include '../../components/footer/footer.njk' %}
+            </td>
+          </tr>
+        </table>
+      </td>
+      <td class="main-margin"></td>
+    </tr>
+  </table>
+</body>
+
+</html>

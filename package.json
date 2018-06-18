@@ -1,0 +1,34 @@
+{
+  "name": "emails",
+  "version": "1.0.0",
+  "description": "Tonal email templates",
+  "scripts": {
+    "start": "gulp",
+    "test": "xo",
+    "prettier": "prettier --write '{**/*,*}.{js,scss,json,md}' '!(node_modules|build|cache)/**'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/riptlabs/emails.git"
+  },
+  "author": "Max Lapides",
+  "license": "UNLICENSED",
+  "homepage": "https://bitbucket.org/riptlabs/emails#readme",
+  "xo": {
+    "prettier": true,
+    "space": true,
+    "semicolon": false
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "sass-lint": "^1.12.1",
+    "xo": "^0.21.1"
+  },
+  "dependencies": {
+    "browser-sync": "^2.24.4",
+    "del": "^3.0.0",
+    "dovetailer": "^0.7.8",
+    "fastify": "^1.6.0",
+    "gulp": "^4.0.0"
+  }
+}

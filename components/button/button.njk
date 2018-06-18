@@ -1,0 +1,18 @@
+{# https://www.emailonacid.com/blog/article/email-development/simple-code-based-bulletproof-button #}
+{% macro button(label, link='#', size='medium') %}
+<table class="button-wrapper" align="center">
+  <tr>
+    <td align="center">
+      <table class="button-inner-wrapper">
+        <tr>
+          <td class="button {{ size }}" align="center">
+            <a href="{{ link }}">
+              {{ label }}
+            </a>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+{% endmacro %}

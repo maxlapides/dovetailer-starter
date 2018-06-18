@@ -1,0 +1,92 @@
+$button-sizes: (
+  medium: (
+    width: 200px,
+    height: 50px,
+    font-size: 16px
+  ),
+  large: (
+    width: 300px,
+    height: 80px,
+    font-size: 24px
+  )
+);
+
+.button-wrapper {
+  width: 100%;
+  margin: 0 auto;
+
+  .button-inner-wrapper {
+    margin: 0 auto;
+  }
+
+  .button {
+    $button-width: 200px;
+    $button-color: color(blue);
+    $border-radius: 3px;
+    $border-width: 1px;
+    $line-height: 30px;
+    background-color: $button-color;
+    border-radius: $border-radius;
+
+    a {
+      padding: 0;
+      display: block;
+      text-decoration: none;
+      text-align: center;
+      font-weight: bold;
+      font-family: $font-stack;
+      color: white;
+      background: $button-color;
+      border: $border-width solid $button-color;
+      border-radius: $border-radius;
+      line-height: $line-height;
+      letter-spacing: 0.05em;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    @each $size, $values in $button-sizes {
+      $width: map-get($values, width);
+      $height: map-get($values, height);
+      $font-size: map-get($values, font-size);
+
+      $padding-vert: ($height - $line-height) / 2;
+      $padding-horiz: 10px;
+      $a-width: $width - (($padding-horiz + $border-width) * 2);
+      $a-height: $height - (($padding-vert + $border-width) * 2);
+
+      &.#{$size} {
+        width: $width;
+        height: $height;
+
+        a {
+          width: $a-width;
+          height: $a-height;
+          font-size: $font-size;
+          padding: $padding-vert $padding-horiz;
+        }
+
+        $margin: 62px;
+        @media (max-width: $width + $margin) {
+          width: $width - $margin;
+          height: $height - $margin;
+
+          a {
+            width: $a-width - $margin;
+            height: $a-height - $margin;
+          }
+        }
+      }
+    }
+
+    &:hover {
+      $hover-color: lighten($button-color, 3%);
+      background-color: $hover-color;
+
+      a {
+        text-decoration: none;
+        border-color: $hover-color;
+        background-color: $hover-color;
+      }
+    }
+  }
+}

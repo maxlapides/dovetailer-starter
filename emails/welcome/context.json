@@ -1,0 +1,8 @@
+{
+  "title": "Welcome Email",
+  "header": "Welcome, ",
+  "firstName": "Max",
+  "buttonLabel": "Click here!",
+  "buttonLink": "https://github.com/maxlapides/dovetailer",
+  "message": ["This is a welcome email!", "Time to get coding!"]
+}
