@@ -1,7 +1,7 @@
 {
   "name": "emails",
   "version": "1.0.0",
-  "description": "Tonal email templates",
+  "description": "Dovetailer starter project",
   "scripts": {
     "start": "gulp",
     "test": "xo",
