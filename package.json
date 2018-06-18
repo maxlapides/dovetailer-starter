@@ -13,7 +13,7 @@
   },
   "author": "Max Lapides",
   "license": "UNLICENSED",
-  "homepage": "https://bitbucket.org/riptlabs/emails#readme",
+  "homepage": "https://github.com/maxlapides/dovetailer-starter",
   "xo": {
     "prettier": true,
     "space": true,
