@@ -1,5 +1,7 @@
 # Dovetailer Starter
 
+Dovetailer is an email compiler. Write Sass and Nunjucks to generate HTML emails with text versions. [Learn more here.](https://github.com/maxlapides/dovetailer).
+
 This repo is meant to be forked. Use it as a starter, and hack away :)
 
 ## Requirements
