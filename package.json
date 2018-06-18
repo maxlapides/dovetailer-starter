@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@bitbucket.org/riptlabs/emails.git"
+    "url": "git@github.com:maxlapides/dovetailer-starter.git"
   },
   "author": "Max Lapides",
   "license": "UNLICENSED",
